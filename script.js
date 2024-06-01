@@ -151,8 +151,8 @@ const book = getBook(2);
 // const title = book.title;
 // const author=book.author;
 
-const { title, author, genres } = book;
-console.log(title, author);
+const { title, author, genres, id } = book;
+console.log(title, author, id);
 
 //2 destrcting array
 const [primaryGenre, secondaryGenre] = genres;
