@@ -143,17 +143,46 @@ function getBook(id) {
   return data.find((d) => d.id === id);
 }
 
-//Destrcucturing:
+//1- Destrcucturing:
 
-//1 destructing obj
+//destructing obj
 const book = getBook(2);
 
 // const title = book.title;
 // const author=book.author;
 
-const { title, author, genres, id } = book;
+const { title, author, genres, pages, publicationDate, id } = book;
 console.log(title, author, id);
 
-//2 destrcting array
-const [primaryGenre, secondaryGenre] = genres;
-console.log(primaryGenre, secondaryGenre);
+//destrcting array
+const [primaryGenre, secondaryGenre, ...otherGenre] = genres;
+console.log(primaryGenre, secondaryGenre, otherGenre);
+
+//2- rest-spread opretors for obj and array
+const newGenre = ["newEpic", ...genres];
+console.log(newGenre);
+
+const updatedBook = {
+  ...book,
+  //ovride at exiciting prop
+  pages: 1210,
+  //adding anew prop
+  moviePublicationDate: "12-20-2000",
+};
+
+console.log(updatedBook);
+
+//3- templete literals:
+const summary = `this book was written by ${author} }`;
+summary;
+
+//4-template literarls
+const pageRange = pages > 1000 ? "over a thousend" : "less than thoushand";
+pageRange;
+
+//5- arrow function
+const getYear = (str) => str.split("-")[0];
+getYear(publicationDate);
+publicationDate;
+
+//6-
