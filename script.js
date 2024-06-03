@@ -185,4 +185,5 @@ const getYear = (str) => str.split("-")[0];
 getYear(publicationDate);
 publicationDate;
 
-//6-
+//6- short circuit and logical operators
+const one = 1;
