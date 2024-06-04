@@ -187,3 +187,4 @@ publicationDate;
 
 //6- short circuit and logical operators
 const one = 1;
+const two = 2;
